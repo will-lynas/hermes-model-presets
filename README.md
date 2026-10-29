@@ -10,7 +10,7 @@ Named model, provider and reasoning presets for Hermes messaging.
 <p align="center">
   <img src="assets/alias-demo.png" width="600" alt="The ax alias switching to Astra with xhigh reasoning effort">
   <br>
-  <em><code>ax</code> switches both the model to Astra and the reasoning effort to <code>xhigh</code>.</em>
+  <em><code>ax</code> switches both the model to <code>gpt-6-astra</code> and the reasoning effort to <code>xhigh</code>.</em>
 </p>
 
 ## Setup
