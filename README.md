@@ -7,6 +7,10 @@ Named model, provider and reasoning presets for Hermes messaging.
 → /model gpt-5 --provider openai-api --reasoning high --session
 ```
 
+![The ax alias switching to Astra with xhigh reasoning effort](assets/alias-demo.png)
+
+*`ax` switches both the model to Astra and the reasoning effort to `xhigh`.*
+
 ## Setup
 
 ```sh
