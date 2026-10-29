@@ -1,0 +1,4 @@
+# Development tools only; no third-party runtime dependencies.
+pytest==9.1.1
+ruff==0.17.1
+ty==0.0.90
