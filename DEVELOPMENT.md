@@ -3,9 +3,9 @@
 ## Setup
 
 ```sh
-python -m venv .venv
+uv venv --python 3.11
 . .venv/bin/activate
-python -m pip install --require-hashes -r requirements-dev.txt
+uv pip sync --require-hashes requirements-dev.txt
 ```
 
 ## Checks

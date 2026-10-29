@@ -4,7 +4,7 @@ Named model, provider and reasoning presets for Hermes messaging.
 
 ```text
 /model deep
-→ /model gpt-5 --provider openai --reasoning high --session
+→ /model gpt-5 --provider openai-api --reasoning high --session
 ```
 
 ## Setup
@@ -24,7 +24,7 @@ plugins:
         aliases:
           deep:
             model: gpt-5
-            provider: openai
+            provider: openai-api
             reasoning_effort: high
 ```
 
@@ -39,8 +39,18 @@ plugins:
 
 Names match exactly, including case. `reasoning_effort` is optional.
 
-Requires Hermes 0.22.5+ and Python 3.11+. Messaging only, not local CLI/TUI,
-Desktop or API turns. `--once` and smart-dash flags aren't expanded.
-Reapply session presets after a gateway restart.
+Session presets need reapplying after a gateway restart. `--once` isn't expanded.
+
+## Requirements
+
+- Hermes 0.22.5+
+- Python 3.11+
+- A Hermes messaging gateway; local CLI/TUI, Desktop and API turns aren't supported.
+
+## How it works
+
+The `pre_gateway_dispatch` hook rewrites matching `/model` aliases into full
+commands. Hermes then handles the model switch normally. Other commands pass
+through unchanged.
 
 [Development](DEVELOPMENT.md) · [MIT](LICENSE)
