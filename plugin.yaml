@@ -1,0 +1,16 @@
+name: model-presets
+version: 0.1.0
+manifest_version: 2
+api_version: 1
+description: Named model, provider and reasoning presets for gateway /model commands.
+author: will-lynas
+license: MIT
+homepage: https://github.com/will-lynas/hermes-model-presets
+requires_hermes: ">=0.22.5"
+provides_hooks:
+  - pre_gateway_dispatch
+config_schema:
+  aliases:
+    type: dict
+    default: {}
+    description: Exact alias names mapped to model, provider and optional reasoning_effort.
